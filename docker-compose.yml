@@ -36,8 +36,8 @@ services:
       - es
     ports:
       - 5000:5000
-    volumes:
-      - ./flask-app:/project/flask-app
+    #volumes:
+      #- ./flask-app:/project/flask-app
     networks: 
       - frontend
       - backend
