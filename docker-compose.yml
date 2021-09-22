@@ -2,10 +2,10 @@ version: "3"
 services:
 
   frontend:
-    image: nginx:latest
+    build: ./flask-app/
     container_name: nginx_app
     ports: 
-      - "8080:80"
+      - "80:80"
     depends_on: 
       - app
     volumes: 
@@ -30,7 +30,7 @@ services:
 
 
   app:
-    image: mult_foodtrucks_image
+    build: .
     command: python app.py
     depends_on:
       - es
